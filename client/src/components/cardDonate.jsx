@@ -14,7 +14,7 @@ const CardDonate = () => {
     console.log('babiii ', donation)
     return (
         <>
-        <div className='bg-slate-100 text-center pb-10' >
+        <div id='cardDonate' className='bg-slate-100 text-center pb-10' >
             <h1 className='text-xl pt-10 pb-10 text-red-700 font-bold'>Donate Now</h1>
             <div className='flex w-2/3 mx-auto gap-10'>
                 {donation?.map((donation) => (
