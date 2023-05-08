@@ -9,6 +9,7 @@ import (
 type DonationRepository interface {
 	FindDonation() ([]models.Donation, error)
 	GetDonation(ID int) (models.Donation, error)
+	GetDonationByUserID(userId int) ([]models.Donation, error)
 	CreateDonation(donation models.Donation) (models.Donation, error)
 	GetDonationUser(userId int) ([]models.Donation, error)
 }
@@ -29,6 +30,12 @@ func (r *repository) GetDonation(ID int) (models.Donation, error) {
 	err := r.db.Preload("User").First(&donation, ID).Error
 
 	return donation, err
+}
+
+func (r *repository) GetDonationByUserID(userId int) ([]models.Donation, error) {
+	var donations []models.Donation
+	err := r.db.Where("user_id=?", userId).Preload("User").Find(&donations).Error
+	return donations, err
 }
 
 func (r *repository) CreateDonation(donation models.Donation) (models.Donation, error) {

@@ -38,6 +38,18 @@ func (h *handlerDonation) GetDonation(c echo.Context) error {
 	return c.JSON(http.StatusOK, dto.SuccessResult{Code: http.StatusOK, Data: donation})
 }
 
+func (h *handlerDonation) GetDonationByUserID(c echo.Context) error {
+	userLogin := c.Get("userLogin")
+	userId := userLogin.(jwt.MapClaims)["id"].(float64)
+
+	donation, err := h.DonationRepository.GetDonationByUserID(int(userId))
+	if err != nil {
+		return c.JSON(http.StatusInternalServerError, dto.ErrorResult{Code: http.StatusInternalServerError, Message: err.Error()})
+	}
+
+	return c.JSON(http.StatusOK, dto.SuccessResult{Code: http.StatusOK, Data: donation})
+}
+
 func (h *handlerDonation) FindDonation(c echo.Context) error {
 	donation, err := h.DonationRepository.FindDonation()
 	if err != nil {

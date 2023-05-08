@@ -15,6 +15,7 @@ func DonationRoutes(e *echo.Group) {
 
 	e.GET("/donations", h.FindDonation)
 	e.GET("/donation/:id", h.GetDonation)
+	e.GET("/donation-by-user", middleware.Auth(h.GetDonationByUserID))
 	e.POST("/donation", middleware.Auth(middleware.UploadFile(h.CreateDonation)))
 	e.GET("/donation-user", middleware.Auth(h.GetDonationUser))
 }
