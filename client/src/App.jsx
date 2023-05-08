@@ -71,7 +71,7 @@ function App() {
             <Route element={<PrivateRouteLogin/>}>
               <Route path='/profile' element={<Profile/>} />
               <Route path='/raise-fund' element={<RaiseFund/>} />
-              <Route path='/view-fund' element={<ViewFund/>} />
+              <Route path='/view-fund/:id' element={<ViewFund/>} />
               <Route path='/form-fund' element={<FormFund/>} />
               <Route path='/donate' element={<Donate/>} />
               <Route path='/approve' element={<Approve/>} />

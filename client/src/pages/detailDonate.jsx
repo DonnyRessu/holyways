@@ -148,25 +148,25 @@ const DetailDonate = () => {
                         htmlFor="">
                     <h1 className="font-bold text-2xl mb-2 text-gray-800">Nominal</h1>
                     <form onSubmit={(e) => handleDonate.mutate(e)}>
-                    <input
-                    onChange={handleOnChange}
-                    name="total"
-                    value={form.total}
-                    style={{ backgroundColor: "#D2D2D240" }}
-                    type="number"
-                    placeholder="Nominal Donation"
-                    className="text-gray-600 input input-bordered w-full max-w-xs mb-3"
-                    />
+                          <input
+                          onChange={handleOnChange}
+                          name="total"
+                          value={form.total}
+                          style={{ backgroundColor: "#D2D2D240" }}
+                          type="number"
+                          placeholder="Nominal Donation"
+                          className="text-gray-600 input input-bordered w-full max-w-xs mb-3"
+                          />
 
-                {/* {message && message} */}
+                      {/* {message && message} */}
 
-                <button
-                  type="submit"
-                  className="mt-7 btn bg-red-700 w-full text-white font-semibold p-2 rounded-md text-center border-none hover:bg-red-900 hover:text-white mr-4"
-                >
-                  Donate
-                </button>
-              </form>
+                      <button
+                        type="submit"
+                        className="mt-7 btn bg-red-700 w-full text-white font-semibold p-2 rounded-md text-center border-none hover:bg-red-900 hover:text-white mr-4"
+                      >
+                        Donate
+                      </button>
+                    </form>
             </label>
           </label>
 

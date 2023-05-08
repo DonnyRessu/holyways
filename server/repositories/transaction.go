@@ -52,7 +52,7 @@ func (r *repository) FindTransactionByDonationIDAndStatusSucces(donationId int) 
 
 func (r *repository) GetTransaction(ID int) (models.Transaction, error) {
 	var transaction models.Transaction
-	err := r.db.Preload("Donation").Preload("User").First(&transaction).Error
+	err := r.db.Preload("Donation").Preload("User").First(&transaction, ID).Error
 
 	return transaction, err
 }

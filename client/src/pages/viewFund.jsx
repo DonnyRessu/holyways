@@ -1,6 +1,16 @@
+import { useParams } from 'react-router-dom'
 import fotoDetailDonate from '../images/fotoDetailDonate.png'
+import { useQuery } from 'react-query'
+import { API } from '../config/api'
 
 const ViewFund = () => {
+    const { id } = useParams()
+    const { data: detailDonation } = useQuery("donationDetailCache", async () => {
+        const response = await API.get(`/donation/${id}`)
+        console.log(response.data.data)
+        return response.data.data
+    })
+    console.log('JEMBUTTT ', detailDonation)
     return (
         <>
         <div className="bg-slate-100 h-[1200px]">
