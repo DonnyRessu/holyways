@@ -1,4 +1,4 @@
-import icon from '../images/icon.png'
+import logo from '../images/logo.png'
 import Login from './modal/login';
 import Register from './modal/register';
 import { ModalContext } from '../context/modalContext';
@@ -18,7 +18,7 @@ const Navbar = () => {
     <>
     <div className="navbar bg-red-700" >
       <div className="flex-1">
-        <Link to={'/'}><p className="btn btn-ghost normal-case text-xl pl-20"><img src={icon}/></p></Link>
+        <Link to={'/'}><p className="btn btn-ghost normal-case text-xl pl-20"><img src={logo}/></p></Link>
       </div>
       <div className="flex-none pr-20">
       {/* button login & register */}
