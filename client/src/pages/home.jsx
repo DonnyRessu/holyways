@@ -20,7 +20,7 @@ const Home = () => {
             <div className='pl-36 mt-8 w-[700px]'>
                 <h1 className="text-white font-bold text-3xl">While you are still standing, try to reach out to the people who are falling.</h1>
                 <p className='pt-7 text-white'>Lorem ipsum dolor sit amet consectetur adipisicing elit. Mollitia fugiat optio facere dolorem nulla cumque aut sapiente consectetur ex delectus quos corporis, rem officia ab, quod nemo maiores nobis fugit?</p>
-                <button onClick={() => window.location.href('#cardDonate')} className='bg-white px-8 py-1 rounded text-red-700 mt-5'>Donate Now</button>
+                <button onClick={scrollToBottom} className='bg-white px-8 py-1 rounded text-red-700 mt-5'>Donate Now</button>
             </div>
             <div>
                 <img className='w-[350px] absolute right-0 mt-8' src={foto1} />
@@ -44,7 +44,9 @@ const Home = () => {
                 </div>
             </div>
         </div>
-        <CardDonate ref={scrollRef}/>
+        <div ref={scrollRef} >
+            <CardDonate/>
+        </div>
         </>
     )
 }
