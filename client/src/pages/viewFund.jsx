@@ -16,11 +16,11 @@ const ViewFund = () => {
         <div className="bg-slate-100 h-[1200px]">
             <div className="flex w-2/3 mx-auto justify-between pt-10 gap-10">
                 <div>
-                    <img className='w-[700px]' src={fotoDetailDonate} />
+                    <img className='w-[700px]' src={detailDonation?.image} />
                 </div>
                 <div>
-                    <h1 className='text-black font-bold text-xl'>The Strength of a People. Power of Community</h1>
-                    <p className='pt-10'><span className='text-red-500'>Rp 25.000.000</span> Gathered From <span>Rp 200.000.000</span></p>
+                    <h1 className='text-black font-bold text-xl'>{detailDonation?.title}</h1>
+                    <p className='pt-10'><span className='text-red-500'>Rp 25.000.000</span> Gathered From <span>Rp {detailDonation?.goal}</span></p>
                     <progress className="progress progress-error w-80" value="40" max="100"></progress>
                     <div className='flex justify-between pb-7'>
                         <div>
@@ -31,7 +31,7 @@ const ViewFund = () => {
                         </div>
                     </div>
                     <div>
-                        <p className='text-justify'>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Nesciunt provident amet sint incidunt delectus quos molestiae beatae nihil vel eligendi.</p>
+                        <p className='text-justify'>{detailDonation?.description}</p>
                     </div>
                     <div className='pt-4'>
                         <button className='bg-red-600 w-full rounded py-1 text-white'>Donate</button>

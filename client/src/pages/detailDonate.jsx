@@ -36,7 +36,6 @@ const DetailDonate = () => {
         console.log(response.data.data)
         return response.data.data
     })
-    console.log('JEMBUTTT ', detailDonation)
 
     useEffect(() => {
         //change this to the script source you want to load, for example this is snap.js sandbox env
@@ -79,6 +78,7 @@ const DetailDonate = () => {
           console.log("donation success :", response);
     
           const token = response.data.data.token;
+          console,log("Kontolll", token)
     
           window.snap.pay(token, {
             onSuccess: function (result) {
