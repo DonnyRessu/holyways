@@ -13,7 +13,7 @@ const ViewFund = () => {
     console.log('JEMBUTTT ', detailDonation)
     return (
         <>
-        <div className="bg-slate-100 h-[1200px]">
+        <div className="bg-slate-100 h-full pb-10">
             <div className="flex w-2/3 mx-auto justify-between pt-10 gap-10">
                 <div>
                     <img className='w-[700px]' src={detailDonation?.image} />

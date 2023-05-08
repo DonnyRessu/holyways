@@ -44,7 +44,7 @@ const Register = () => {
     })
     return (
         <>
-        <div className="w-1/3 h-96 bg-white mx-auto mt-14 px-5 rounded-md">
+        <div className="w-1/3 h-full bg-white mx-auto mt-14 px-5 rounded-md pb-3">
             <h2 className="text-3xl text-black font-bold pt-3">Register</h2>
             {message && message}
             <form onSubmit={(e) => handleonSubmit.mutate(e)}>

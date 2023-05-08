@@ -49,7 +49,7 @@ const Login = () => {
     })
     return(
         <>
-        <div className="w-1/3 h-64 bg-white mx-auto mt-20 px-5 rounded-md">
+        <div className="w-1/3 h-full pb-3 bg-white mx-auto mt-20 px-5 rounded-md">
             <h2 className="text-3xl text-black font-bold pt-3">Login</h2>
             {message && message}
             <form onSubmit={(e) => handleOnSubmit.mutate(e)}>
