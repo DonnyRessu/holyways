@@ -35,5 +35,5 @@ func main() {
 	e.Static("/uploads", "./uploads")
 
 	fmt.Println("Server running on localhost:" + PORT)
-	e.Logger.Fatal(e.Start("localhost:" + PORT))
+	e.Logger.Fatal(e.Start(":" + PORT))
 }
