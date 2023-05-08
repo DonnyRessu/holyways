@@ -9,7 +9,7 @@ type Donation struct {
 	User          UsersProfileResponse `json:"user"`
 	CurrentGoal   int                  `json:"current_goal"`
 	Goal          int                  `json:"goal"`
-	TotalDonation int                  `json:"total_donation" gorm:"type: varchar(255)"`
+	TotalDonation int                  `json:"total_donation"`
 	Expired       string               `json:"expired" gorm:"type: varchar(255)"`
 	Description   string               `json:"description" gorm:" type: varchar(255)"`
 	Image         string               `json:"image"`
