@@ -12,9 +12,9 @@ const RaiseFund = () => {
                 </Link>
             </div>
             <h1 className='text-2xl font-bold text-black pl-32 pt-5'>My Raise Fund</h1>
-            <Link to={'/view-fund'}>
+            {/* <Link to={'/view-fund'}> */}
             <CardViewFund/>
-            </Link>
+            {/* </Link> */}
         </div>
         </>
     )

@@ -5,7 +5,6 @@ export const ModalContext = createContext();
 const initialState = {
     isLoginModal: false,
     isRegisterModal: false,
-    isDonationModal: false
 }
 
 const reducer = (state, action) => {
@@ -21,10 +20,6 @@ const reducer = (state, action) => {
             return {
                 isRegisterModal: true,
                 isLoginModal: false
-            }
-        case 'DONATION_MODAL':
-            return {
-                isDonationModal: true,
             }
         case 'CLOSE_AUTH_MODAL':
             return {

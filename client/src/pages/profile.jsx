@@ -8,6 +8,11 @@ import { data } from 'autoprefixer'
 const Profile = () => {
     const [userState, _] = useContext(UserContext)
     console.log("kk", userState)
+
+    // const {data: user,} = useQuery('profile', async () => {
+    //     const response = await API.get(`user/${userState.user.id}`);
+    //     return response.data.data;
+    //   });
     
     // window.location.reload()
     return (
